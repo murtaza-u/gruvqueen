@@ -1,7 +1,7 @@
 # Gruvqueen
 > Port of famous gruvbox theme in lua(inspired by [gruvbox-material](https://github.com/sainnhe/gruvbox-material))
 
-![original](./assets/.png)
+![original](./assets/original.png)
 ![mix](./assets/mix.png)
 ![material](./assets/material.png)
 
