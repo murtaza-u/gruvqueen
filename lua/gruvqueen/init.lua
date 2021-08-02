@@ -14,10 +14,10 @@ local base = require("gruvqueen.base")
 local treesitter = require("gruvqueen.treesitter")
 local lsp = require('gruvqueen.lsp')
 local plugins = require("gruvqueen.plugins")
-local languages = require("gruvqueen.languages")
+local ft = require("gruvqueen.filetype")
 
 local skeletons = {
-    base, treesitter, lsp, plugins, languages
+    base, treesitter, lsp, plugins, ft
 }
 
 for _, skeleton in ipairs(skeletons) do

@@ -1,4 +1,5 @@
-local languages = {
+local ft = {
+    -- markown
     markdownH1 = {fg = C.red, bg = C.none, style = Config.disable_bold and "NONE" or "bold", },
     markdownH2 = {fg = C.orange, bg = C.none, style = Config.disable_bold and "NONE" or "bold", },
     markdownH3 = {fg = C.yellow, bg = C.none, style = Config.disable_bold and "NONE" or "bold", },
@@ -27,6 +28,7 @@ local languages = {
     markdownBoldDelimiter = {fg = C.grey1, bg = C.none, },
     markdownId = {fg = C.yellow, bg = C.none, },
 
+    -- html
     htmlH1 = {fg = C.red, bg = C.none, style = Config.disable_bold and "NONE" or "bold", },
     htmlH2 = {fg = C.orange, bg = C.none, style = Config.disable_bold and "NONE" or "bold", },
     htmlH3 = {fg = C.yellow, bg = C.none, style = Config.disable_bold and "NONE" or "bold", },
@@ -48,6 +50,23 @@ local languages = {
     htmlArg = {fg = C.aqua, bg = C.none, },
     htmlScriptTag = {fg = C.purple, bg = C.none, },
     htmlSpecialTagName = {fg = C.red, bg = C.none, style = "italic", },
+
+    -- help
+    helpNote = {fg = C.purple, style = 'bold'},
+    helpHeadline = {fg = C.red,  style = 'bold'},
+    helpHeader = {fg = C.orange, style = 'bold'},
+    helpURL = {fg = C.green, style = 'underline'},
+    helpHyperTextEntry = {fg = C.yellow, style = 'bold'},
+    helpHyperTextJump = {fg = C.yellow},
+    helpCommand = {fg = C.aqua},
+    helpExample = {fg = C.green},
+    helpSpecial = {fg = C.blue},
+    helpSectionDelim = {fg = C.grey1},
+
+    -- python
+    pythonBuiltin = {fg = C.yellow},
+    pythonExceptions = {fg = C.purple},
+    pythonDecoratorName = {fg = C.blue},
 }
 
-return languages
+return ft

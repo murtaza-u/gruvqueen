@@ -10,6 +10,8 @@
 * material
 ![material](./assets/material.png)
 
+** font: JetBrains Mono Nerd Font **
+
 
 ## ⭐Features
 * 3 styles to choose from - original, mix, material
@@ -48,8 +50,7 @@ vim.cmd('colorscheme gruvqueen')
 ```
 
 ## Modify highlights
-Sice gruvqueen is written in lua you can require different components*(after setting the colorscheme)* of the colorscheme and modify the highlighting
-
+Sice gruvqueen is written in lua you can require different components **(after setting the colorscheme)** of the colorscheme and modify the highlighting
 Example: Changing the styles for LspDiagnosticsVirtualText
 ```lua
 local lsp = require("gruvqueen.lsp")
@@ -59,15 +60,30 @@ lsp.LspDiagnosticsVirtualTextInformation.style = "underline"
 lsp.LspDiagnosticsVirtualTextHint.style = "underline"
 ```
 
+## tmux(fix undercurl)
+```tmux.conf
+set -g default-terminal "tmux-256color"
+set -ag terminal-overrides ",xterm-256color:RGB"
+set -as terminal-overrides ',*:Smulx=\E[4::%p1%dm'  # undercurl support
+set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{255}%&%d::%p1%{255}%&%d%;m'  # underscore colours - needs tmux-3.0
+```
+
 
 ## Supported plugins
 * Treesitter
 * LSP
 * Telescope
 * IndentBlankLine
-* Many more coming soon......
+* gitsigns.nvim
+* vim-easymotion
+* nvim-ts-rainbow
+* nvim-tree
+* undotree
+* startify
 
 
 ## TODO
 * [x] provide option to disable `bold`
 * [ ] support for more plugins
+
+#### All PR are welcomed😄. Open Issues for discussions/bugs.
