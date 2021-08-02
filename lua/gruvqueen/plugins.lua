@@ -1,6 +1,6 @@
 local plugins = {
     -- Telescope
-    TelescopeMatching = {fg = C.green, bg = C.none, style = "bold", },
+    TelescopeMatching = {fg = C.green, bg = C.none, style = Config.disable_bold and "NONE" or "bold", },
     TelescopeBorder = {fg = C.grey1, bg = Config.transparent_background and "NONE" or C.none, },
     TelescopePromptPrefix = {fg = C.orange, bg = C.none, },
     TelescopeSelection = {fg = C.none, bg = C.bg_diff_green, },

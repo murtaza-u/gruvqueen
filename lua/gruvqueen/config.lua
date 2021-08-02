@@ -20,6 +20,7 @@ config = {
     italic_keywords = opt("italic_keywords", true) and "italic" or "NONE",
     italic_functions = opt("italic_function", false) and "italic" or "NONE",
     italic_variables = opt("italic_variables", true) and "italic" or "NONE",
+    disable_bold = opt("disable_bold", false),
     style = opt("style", "material"),
     invert_selection = opt("invert_selection", true),
 }
