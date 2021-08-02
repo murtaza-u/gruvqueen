@@ -98,6 +98,9 @@ local base = {
     CursorLineNr = {fg = C.blue, },
     CursorLine = {fg = C.none, bg = C.bg1, },
     CursorColumn = {fg = C.none, bg = C.bg1, },
+    healthError = {fg = C.red, bg = C.none, },
+    healthSuccess = {fg = C.green, bg = C.none, },
+    healthWarning = {fg = C.yellow, bg = C.none, },
 }
 
 return base

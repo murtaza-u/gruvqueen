@@ -12,11 +12,12 @@ C = require("gruvqueen.palette")
 
 local base = require("gruvqueen.base")
 local treesitter = require("gruvqueen.treesitter")
+local lsp = require('gruvqueen.lsp')
 local plugins = require("gruvqueen.plugins")
 local languages = require("gruvqueen.languages")
 
 local skeletons = {
-    base, treesitter, plugins, languages
+    base, treesitter, lsp, plugins, languages
 }
 
 for _, skeleton in ipairs(skeletons) do
