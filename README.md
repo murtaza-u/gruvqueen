@@ -10,7 +10,7 @@
 * material
 ![material](./assets/material.png)
 
-** font: JetBrains Mono Nerd Font **
+** font☝️ : [JetBrains Mono Nerd Font](https://www.nerdfonts.com/font-downloads)
 
 
 ## ⭐Features
@@ -22,7 +22,7 @@
 * Neovim >= 0.5
 
 
-# Installation
+## Installation
 * packer
 ```bash
 use 'Murtaza-Udaipurwala/gruvqueen'
@@ -34,7 +34,7 @@ Plug 'Murtaza-Udaipurwala/gruvqueen'
 ```
 
 
-## Usage
+## 🚀Usage
 ```lua
 vim.g.gruvqueen_transparent_background = false
 -- vim.g.gruvqueen_background_color = "#10151a"
@@ -49,7 +49,7 @@ vim.g.gruvqueen_style = 'mix' -- possible values: 'original', 'mix', 'material'
 vim.cmd('colorscheme gruvqueen')
 ```
 
-## Modify highlights
+## 💥Modify highlights
 Sice gruvqueen is written in lua you can require different components **(after setting the colorscheme)** of the colorscheme and modify the highlighting
 Example: Changing the styles for LspDiagnosticsVirtualText
 ```lua
@@ -69,7 +69,7 @@ set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{25
 ```
 
 
-## Supported plugins
+## 🤩Supported plugins
 * Treesitter
 * LSP
 * Telescope
