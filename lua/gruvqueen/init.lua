@@ -7,9 +7,6 @@ vim.o.termguicolors = true
 vim.g.colors_name = "gruvqueen"
 
 local util = require("gruvqueen.util")
-Config = require("gruvqueen.config")
-C = require("gruvqueen.palette")
-
 local base = require("gruvqueen.base")
 local treesitter = require("gruvqueen.treesitter")
 local lsp = require('gruvqueen.lsp')

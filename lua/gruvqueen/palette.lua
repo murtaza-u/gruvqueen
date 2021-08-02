@@ -68,10 +68,11 @@ local original = {
     bg_yellow = "#fabd2f",
 }
 
+local config = require("gruvqueen.config")
 local final
-if Config.style == "material" then
+if config.style == "material" then
     final = material
-elseif Config.style == "mix" then
+elseif config.style == "mix" then
     final = mix
 else
     final = original
