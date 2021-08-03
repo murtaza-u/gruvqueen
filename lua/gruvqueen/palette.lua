@@ -20,7 +20,6 @@ local common = {
     grey0 = "#7c6f64",
     grey1 = "#928374",
     grey2 = "#a89984",
-    menu_grey = "#282C34",
 }
 
 local material = {
