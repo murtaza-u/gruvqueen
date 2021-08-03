@@ -50,7 +50,7 @@ vim.cmd('colorscheme gruvqueen')
 ```
 
 ## 💥Modify highlights
-Sice gruvqueen is written in lua you can require different components **(after setting the colorscheme)** of the colorscheme and modify the highlighting
+Sice gruvqueen is written in lua you can require different components **(before setting the colorscheme)** of the colorscheme and modify the highlighting
 Example: Changing the styles for LspDiagnosticsVirtualText
 ```lua
 local lsp = require("gruvqueen.lsp")
@@ -85,5 +85,11 @@ set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{25
 ## TODO
 * [x] provide option to disable `bold`
 * [ ] support for more plugins
+* [ ] Light theme
+
+
+## Note
+* Specify all your configuration before calling `vim.cmd("colorscheme gruvqueen")`
+
 
 #### All PR are welcomed😄. Open Issues for discussions/bugs.
