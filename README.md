@@ -35,6 +35,7 @@ Plug 'Murtaza-Udaipurwala/gruvqueen'
 
 
 ## 🚀Usage
+lua
 ```lua
 require("gruvqueen").setup({
     config = {
@@ -51,6 +52,8 @@ require("gruvqueen").setup({
 })
 ```
 
+
+vim
 ```vim
 let g:gruvqueen_transparent_background = v:false
 let g:gruvqueen_background_color = '#10151a'
