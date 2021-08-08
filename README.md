@@ -95,10 +95,12 @@ require("gruvqueen").setup({
 
     -- filetype highlights
     ft = {
+        markdownCode = {fg = "green"},
         ...
     },
 
     plugins = {
+        TelescopeBorder = {fg = "grey"},
         ...
     },
 })
