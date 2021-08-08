@@ -36,9 +36,34 @@ function M.set_default()
     if vim.fn.exists("syntax_on") then
         vim.api.nvim_command("syntax reset")
     end
-    vim.o.background = "dark"
     vim.o.termguicolors = true
     vim.g.colors_name = "gruvqueen"
+end
+
+function M.get_palette(style, theme)
+    local colors = require("gruvqueen.palette")
+    local palette
+
+    if theme == "light" then
+        palette = colors.get_light_theme_palette()
+    else
+        palette = colors.get_dark_theme_palette()
+    end
+
+    local final
+    if style == "material" then
+        final = palette.material
+    elseif style == "mix" then
+        final = palette.mix
+    else
+        final = palette.original
+    end
+
+    for key, value in pairs(palette.common) do
+        final[key] = value
+    end
+
+    return final
 end
 
 return M

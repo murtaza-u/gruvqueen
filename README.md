@@ -15,6 +15,7 @@
 
 ## ⭐Features
 * 3 styles to choose from - original, mix, material
+* [NEW!] Light mode has been added
 * configurable
 
 
@@ -37,6 +38,7 @@ Plug 'Murtaza-Udaipurwala/gruvqueen'
 ## 🚀Usage
 lua
 ```lua
+vim.o.background = "dark" -- or light if you so prefer
 require("gruvqueen").setup({
     config = {
         disable_bold = true,
@@ -52,9 +54,9 @@ require("gruvqueen").setup({
 })
 ```
 
-
-vim
+vimscript
 ```vim
+set background = "dark" -- or "light" if you so prefer
 let g:gruvqueen_transparent_background = v:false
 let g:gruvqueen_background_color = '#10151a'
 let g:gruvqueen_disable_bold = v:false
@@ -146,8 +148,8 @@ set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{25
 ## TODO
 * [x] provide option to disable `bold`
 * [x] well defined method to configure colorscheme
+* [x] Light theme
 * [ ] support for more plugins
-* [ ] Light theme
 
 
 ## Note

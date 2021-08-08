@@ -13,9 +13,11 @@ local function opt(key, default)
     return vim.g[key]
 end
 
+local default_bg = vim.o.background == "dark" and "#10151a" or "#f9f5d7"
+
 config = {
     transparent_background = opt("transparent_background", false),
-    bg_color = opt("background_color", "#10151a"),
+    bg_color = opt("background_color", default_bg),
     italic_comments = opt("italic_comments", true),
     italic_keywords = opt("italic_keywords", true),
     italic_variables = opt("italic_variables", true),

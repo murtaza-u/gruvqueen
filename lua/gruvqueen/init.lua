@@ -1,6 +1,8 @@
 local M = {}
 
 function M.setup(user_config)
+    local util = require("gruvqueen.util")
+
     local config = require("gruvqueen.config")
     if user_config and user_config.config then
         for key, value in pairs(user_config.config) do
@@ -8,7 +10,7 @@ function M.setup(user_config)
         end
     end
 
-    local palette = require("gruvqueen.palette").init(config.style)
+    local palette = util.get_palette(config.style, vim.o.background)
     if user_config and user_config.palette then
         for key, value in pairs(user_config.palette) do
             palette[key] = value
@@ -21,7 +23,6 @@ function M.setup(user_config)
     local plugins = require("gruvqueen.plugins").init(palette, config)
     local ft = require("gruvqueen.filetype").init(palette, config)
 
-    local util = require("gruvqueen.util")
     if user_config then
         if user_config.base then
             base = util.modify(base, user_config.base)
