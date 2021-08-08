@@ -36,28 +36,84 @@ Plug 'Murtaza-Udaipurwala/gruvqueen'
 
 ## 🚀Usage
 ```lua
-vim.g.gruvqueen_transparent_background = false
--- vim.g.gruvqueen_background_color = "#10151a"
-vim.g.gruvqueen_disable_bold = false
-vim.g.gruvqueen_italic_comments = true
-vim.g.gruvqueen_italic_keywords = true
-vim.g.gruvqueen_italic_functions = true
-vim.g.gruvqueen_italic_variables = true
-vim.g.gruvqueen_invert_selection = true
-vim.g.gruvqueen_style = 'mix' -- possible values: 'original', 'mix', 'material'
+require("gruvqueen").setup({
+    config = {
+        disable_bold = true,
+        italic_comments = true,
+        italic_keywords = true,
+        italic_functions = true,
+        italic_variables = true,
+        invert_selection = false,
+        style = 'mix', -- possible values: 'original', 'mix', 'material'
+        -- transparent_background = true,
+        -- bg_color = "black",
+    },
+})
+```
 
-vim.cmd('colorscheme gruvqueen')
+```vim
+let g:gruvqueen_transparent_background = v:false
+let g:gruvqueen_background_color = '#10151a'
+let g:gruvqueen_disable_bold = v:false
+let g:gruvqueen_italic_comments = v:true
+let g:gruvqueen_italic_keywords = v:true
+let g:gruvqueen_italic_functions = v:true
+let g:gruvqueen_italic_variables = v:true
+let g:gruvqueen_invert_selection = v:true
+let g:gruvqueen_style = 'mix' " possible values: 'original', 'mix', 'material'
+
+colorscheme gruvqueen
 ```
 
 ## 💥Modify highlights
-Sice gruvqueen is written in lua you can require different components **(before setting the colorscheme)** of the colorscheme and modify the highlighting
-Example: Changing the styles for LspDiagnosticsVirtualText
+* All your custom highlights can be passed to `gruvqueen` through a lua table
+* Checkout [palette.lua](lua/gruvqueen/palette.lua) for list of all available colors
+
 ```lua
-local lsp = require("gruvqueen.lsp")
-lsp.LspDiagnosticsVirtualTextError.style = "underline"
-lsp.LspDiagnosticsVirtualTextWarning.style = "underline"
-lsp.LspDiagnosticsVirtualTextInformation.style = "underline"
-lsp.LspDiagnosticsVirtualTextHint.style = "underline"
+require("gruvqueen").setup({
+    palette = { -- checkout `palette.lua`
+        grey0 = "#7c6f64",
+        bg1 = "#282828",
+    },
+
+    -- basic highlights
+    base = {
+        Number = {fg = "purple", style = "italic"},
+        Float = {fg = "#d3869b", bg = c.none},
+
+        -- syntax:
+        -- highlight_group = {fg = "...", bg = "...", style = "..."}
+    },
+
+    treesitter = {
+        ...
+    },
+
+    lsp = {
+        ...
+    },
+
+    -- filetype highlights
+    ft = {
+        ...
+    },
+
+    plugins = {
+        ...
+    },
+})
+```
+
+Example: Changing styles for `LspDiagnosticsVirtualText`
+```lua
+require("gruvqueen").setup({
+    lsp = {
+        LspDiagnosticsVirtualTextError = {style = "underline"},
+        LspDiagnosticsVirtualTextWarning = {style = "underline"},
+        LspDiagnosticsVirtualTextInformation = {style = "underline"},
+        LspDiagnosticsVirtualTextHint = {style = "underline"},
+    },
+})
 ```
 
 ## tmux(fix undercurl)
@@ -84,6 +140,7 @@ set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{25
 
 ## TODO
 * [x] provide option to disable `bold`
+* [x] well defined method to configure colorscheme
 * [ ] support for more plugins
 * [ ] Light theme
 

@@ -67,18 +67,21 @@ local original = {
     bg_yellow = "#fabd2f",
 }
 
-local config = require("gruvqueen.config")
-local final
-if config.style == "material" then
-    final = material
-elseif config.style == "mix" then
-    final = mix
-else
-    final = original
+local function init(style)
+    local final
+    if style == "material" then
+        final = material
+    elseif style == "mix" then
+        final = mix
+    else
+        final = original
+    end
+
+    for key, value in pairs(final) do
+        common[key] = value
+    end
+
+    return common
 end
 
-for key, value in pairs(final) do
-    common[key] = value
-end
-
-return common
+return {init = init}

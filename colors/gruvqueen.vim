@@ -8,5 +8,5 @@ package.loaded['gruvqueen.treesitter'] = nil
 package.loaded['gruvqueen.plugins'] = nil
 package.loaded['gruvqueen.languages'] = nil
 
-require("gruvqueen")
+require("gruvqueen").setup()
 EOF

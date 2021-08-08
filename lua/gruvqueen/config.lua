@@ -16,10 +16,9 @@ end
 config = {
     transparent_background = opt("transparent_background", false),
     bg_color = opt("background_color", "#10151a"),
-    italic_comments = opt("italic_keywords", true) and "italic" or "NONE",
-    italic_keywords = opt("italic_keywords", true) and "italic" or "NONE",
-    italic_functions = opt("italic_function", false) and "italic" or "NONE",
-    italic_variables = opt("italic_variables", true) and "italic" or "NONE",
+    italic_comments = opt("italic_comments", true),
+    italic_keywords = opt("italic_keywords", true),
+    italic_variables = opt("italic_variables", true),
     disable_bold = opt("disable_bold", false),
     style = opt("style", "material"),
     invert_selection = opt("invert_selection", true),
