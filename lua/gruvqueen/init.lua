@@ -2,7 +2,7 @@ local M = {}
 
 function M.setup(user_config)
     local config = require("gruvqueen.config")
-    if user_config.config then
+    if user_config and user_config.config then
         for key, value in pairs(user_config.config) do
             config[key] = value
         end
