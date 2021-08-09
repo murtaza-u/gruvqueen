@@ -15,8 +15,8 @@
 
 ## ⭐Features
 * 3 styles to choose from - original, mix, material
+* Configurable(you can literally customise each and every aspect of the colorscheme)
 * [NEW!] Light mode has been added
-* configurable
 
 
 ## Requirements
@@ -56,7 +56,7 @@ require("gruvqueen").setup({
 
 vimscript
 ```vim
-set background = "dark" -- or "light" if you so prefer
+set background = 'dark' " or 'light' if you so prefer
 let g:gruvqueen_transparent_background = v:false
 let g:gruvqueen_background_color = '#10151a'
 let g:gruvqueen_disable_bold = v:false
@@ -153,7 +153,7 @@ set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{25
 
 
 ## Note
-* Specify all your configuration before calling `vim.cmd("colorscheme gruvqueen")`
+* If using vimscript to set user configuration, specify all your configuration before calling `vim.cmd("colorscheme gruvqueen")`
 
 
 #### All PR are welcomed😄. Open Issues for discussions/bugs.
