@@ -158,7 +158,6 @@ set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{25
     2. [ ] Neogit
     3. [ ] Lualine
     4. [ ] which-key.nvim
-    5. .......
 
 
 #### All PR are welcomed😄. Open Issues for discussions/bugs/feature suggestion.
