@@ -1,4 +1,4 @@
-local function init(c, config)
+local function init(c, _)
     local lsp = {
         LspDiagnosticsFloatingError = {fg = c.red, bg = c.bg3, },
         LspDiagnosticsFloatingWarning = {fg = c.yellow, bg = c.bg3, },
@@ -8,14 +8,14 @@ local function init(c, config)
         LspDiagnosticsDefaultWarning = {fg = c.none, bg = c.bg_visual_yellow, style = "undercurl", },
         LspDiagnosticsDefaultInformation = {fg = c.none, bg = c.bg_visual_blue, style = "undercurl", },
         LspDiagnosticsDefaultHint = {fg = c.none, bg = c.bg_visual_green, style = "undercurl", },
-        LspDiagnosticsVirtualTextError = {fg = c.red, bg = c.none, },
-        LspDiagnosticsVirtualTextWarning = {fg = c.yellow, bg = c.none, },
-        LspDiagnosticsVirtualTextInformation = {fg = c.blue, bg = c.none, },
-        LspDiagnosticsVirtualTextHint = {fg = c.green, bg = c.none, },
+        LspDiagnosticsVirtualTextError = {fg = c.red, },
+        LspDiagnosticsVirtualTextWarning = {fg = c.yellow, },
+        LspDiagnosticsVirtualTextInformation = {fg = c.blue, },
+        LspDiagnosticsVirtualTextHint = {fg = c.green, },
         LspDiagnosticsUnderlineError = {fg = c.none, bg = c.bg_visual_red, style = "undercurl", },
         LspDiagnosticsUnderlineWarning = {fg = c.none, bg = c.bg_visual_yellow, style = "undercurl", },
         LspDiagnosticsUnderlineInformation = {fg = c.none, bg = c.bg_visual_blue, style = "undercurl", },
-        LspDiagnosticsUnderlineHint = {fg = c.red, bg = c.none, },
+        LspDiagnosticsUnderlineHint = {fg = c.red, },
         LspDiagnosticsSignError = {fg = c.red, bg = c.bg2, },
         LspDiagnosticsSignWarning = {fg = c.yellow, bg = c.bg2, },
         LspDiagnosticsSignInformation = {fg = c.blue, bg = c.bg2, },

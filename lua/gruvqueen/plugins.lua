@@ -1,28 +1,28 @@
 local function init(c, config)
     local plugins = {
         -- Telescope
-        TelescopeMatching = {fg = c.green, bg = c.none, style = config.disable_bold and "NONE" or "bold", },
+        TelescopeMatching = {fg = c.green, style = config.disable_bold and "NONE" or "bold", },
         TelescopeBorder = {fg = c.grey1, bg = config.transparent_background and "NONE" or c.none, },
-        TelescopePromptPrefix = {fg = c.orange, bg = c.none, },
+        TelescopePromptPrefix = {fg = c.orange, },
         TelescopeSelection = {fg = c.none, bg = c.bg_diff_green, },
 
         -- IndentBlankline
-        IndentBlanklineContextChar = {fg = c.grey0, bg = c.none, },
-        IndentBlanklineChar = {fg = c.bg5, bg = c.none, },
-        IndentBlanklineSpaceChar = {fg = c.bg5, bg = c.none, },
-        IndentBlanklineSpaceCharBlankline = {fg = c.bg5, bg = c.none, },
+        IndentBlanklineContextChar = {fg = c.grey0, },
+        IndentBlanklineChar = {fg = c.bg5, },
+        IndentBlanklineSpaceChar = {fg = c.bg5, },
+        IndentBlanklineSpaceCharBlankline = {fg = c.bg5, },
 
         -- netrw
-        netrwDir = {fg = c.green, bg = c.none, },
-        netrwClassify = {fg = c.green, bg = c.none, },
-        netrwLink = {fg = c.grey1, bg = c.none, },
-        netrwSymLink = {fg = c.fg0, bg = c.none, },
-        netrwExe = {fg = c.yellow, bg = c.none, },
-        netrwComment = {fg = c.grey1, bg = c.none, },
-        netrwList = {fg = c.aqua, bg = c.none, },
-        netrwHelpCmd = {fg = c.blue, bg = c.none, },
-        netrwCmdSep = {fg = c.grey1, bg = c.none, },
-        netrwVersion = {fg = c.orange, bg = c.none, },
+        netrwDir = {fg = c.green, },
+        netrwClassify = {fg = c.green, },
+        netrwLink = {fg = c.grey1, },
+        netrwSymLink = {fg = c.fg0, },
+        netrwExe = {fg = c.yellow, },
+        netrwComment = {fg = c.grey1, },
+        netrwList = {fg = c.aqua, },
+        netrwHelpCmd = {fg = c.blue, },
+        netrwCmdSep = {fg = c.grey1, },
+        netrwVersion = {fg = c.orange, },
 
         -- lewis6991/gitsigns.nvim
         GitSignsAdd =  {fg = c.green, bg = c.bg2},

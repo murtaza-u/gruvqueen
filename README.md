@@ -145,15 +145,20 @@ set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{25
 * startify
 
 
+## 📓Note
+* If using vimscript to set user configuration, specify all your configuration before calling `vim.cmd("colorscheme gruvqueen")`
+
+
 ## TODO
 * [x] provide option to disable `bold`
 * [x] well defined method to configure colorscheme
 * [x] Light theme
 * [ ] support for more plugins
+    1. [ ] Fugitive
+    2. [ ] Neogit
+    3. [ ] Lualine
+    4. [ ] which-key.nvim
+    5. .......
 
 
-## Note
-* If using vimscript to set user configuration, specify all your configuration before calling `vim.cmd("colorscheme gruvqueen")`
-
-
-#### All PR are welcomed😄. Open Issues for discussions/bugs.
+#### All PR are welcomed😄. Open Issues for discussions/bugs/feature suggestion.

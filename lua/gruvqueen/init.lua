@@ -2,7 +2,6 @@ local M = {}
 
 function M.setup(user_config)
     local util = require("gruvqueen.util")
-
     util.set_default()
 
     local config = require("gruvqueen.config")
@@ -19,39 +18,23 @@ function M.setup(user_config)
         end
     end
 
-    local base = require("gruvqueen.base").init(palette, config)
-    local treesitter = require("gruvqueen.treesitter").init(palette, config)
-    local lsp = require('gruvqueen.lsp').init(palette, config)
-    local plugins = require("gruvqueen.plugins").init(palette, config)
-    local ft = require("gruvqueen.filetype").init(palette, config)
-
-    if user_config then
-        if user_config.base then
-            base = util.modify(base, user_config.base)
-        end
-
-        if user_config.treesitter then
-            treesitter = util.modify(treesitter, user_config.treesitter)
-        end
-
-        if user_config.lsp then
-            lsp = util.modify(lsp, user_config.lsp)
-        end
-
-        if user_config.plugins then
-            plugins = util.modify(plugins, user_config.plugins)
-        end
-
-        if user_config.ft then
-            ft = util.modify(ft, user_config.ft)
-        end
-    end
-
     local skeletons = {
-        base, treesitter, lsp, plugins, ft
+        base = require("gruvqueen.base").init(palette, config),
+        treesitter = require("gruvqueen.treesitter").init(palette, config),
+        lsp = require('gruvqueen.lsp').init(palette, config),
+        plugins = require("gruvqueen.plugins").init(palette, config),
+        ft = require("gruvqueen.filetype").init(palette, config),
     }
 
-    for _, skeleton in ipairs(skeletons) do
+    if user_config then
+        skeletons.base = user_config.base and util.modify(skeletons.base, user_config.base) or skeletons.base
+        skeletons.treesitter = user_config.treesitter and util.modify(skeletons.treesitter, user_config.treesitter) or skeletons.treesitter
+        skeletons.lsp = user_config.lsp and util.modify(skeletons.lsp, user_config.lsp) or skeletons.lsp
+        skeletons.plugins = user_config.plugins and util.modify(skeletons.plugins, user_config.plugins) or skeletons.plugins
+        skeletons.ft = user_config.ft and util.modify(skeletons.ft, user_config.ft) or skeletons.ft
+    end
+
+    for _, skeleton in pairs(skeletons) do
         util.initialise(skeleton)
     end
 end
