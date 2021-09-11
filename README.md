@@ -14,10 +14,9 @@
 
 
 ## ⭐Features
-* 3 styles to choose from - original, mix, material
-* Configurable(you can literally customise each and every aspect of the colorscheme)
-* [NEW!] Light mode has been added
-
+* 3 styles to choose from - original, mix, material.
+* Configurable(you can literally customise each and every aspect of the colorscheme).
+* Both light and dark variants available.
 
 ## Requirements
 * Neovim >= 0.5
@@ -143,6 +142,7 @@ set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{25
 * nvim-tree
 * undotree
 * startify
+* Lualine
 
 
 ## 📓Note
@@ -154,10 +154,8 @@ set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{25
 * [x] well defined method to configure colorscheme
 * [x] Light theme
 * [ ] support for more plugins
-    1. [ ] Fugitive
-    2. [ ] Neogit
-    3. [ ] Lualine
-    4. [ ] which-key.nvim
+    1. [x] Lualine
+    2. [ ] which-key.nvim
 
 
 #### All PR are welcomed😄. Open Issues for discussions/bugs/feature suggestion.
