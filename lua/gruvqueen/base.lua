@@ -61,7 +61,7 @@ local function init(c, config)
         Typedef = {fg = c.red, style = "italic", },
         Exception = {fg = c.red, style = "italic", },
         Statement = {fg = c.red, style = "italic", },
-        Error = {fg = c.red, },
+        Error = {fg = c.fg1, bg=c.none },
         StorageClass = {fg = c.orange, },
         Tag = {fg = c.orange, },
         Label = {fg = c.orange, },
