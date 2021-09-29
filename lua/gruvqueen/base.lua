@@ -3,7 +3,7 @@ local function init(c, config)
         Normal = {fg = c.fg0, bg = config.transparent_background and "NONE" or config.bg_color, },
         Terminal = {fg = c.fg0, bg = c.bg0, },
         Folded = {fg = c.grey1, bg = c.bg2, },
-        SignColumn = {fg = c.fg0, bg = c.bg2, },
+        SignColumn = {fg = c.fg0, bg = c.none, },
         FoldColumn = {fg = c.grey1, bg = c.bg2, },
         IncSearch = {fg = c.bg0, bg = c.bg_red, },
         Search = {fg = c.bg0, bg = c.bg_green, },

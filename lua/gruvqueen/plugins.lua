@@ -25,10 +25,10 @@ local function init(c, config)
         netrwVersion = {fg = c.orange, },
 
         -- lewis6991/gitsigns.nvim
-        GitSignsAdd =  {fg = c.green, bg = c.bg2},
-        GitSignsChange =  {fg = c.blue, bg = c.bg2},
-        GitSignsDelete =  {fg = c.red, bg = c.bg2},
-        GitSignsChangeDelete =  {fg = c.purple, bg = c.bg2},
+        GitSignsAdd =  {fg = c.green, bg = c.none},
+        GitSignsChange =  {fg = c.blue, bg = c.none},
+        GitSignsDelete =  {fg = c.red, bg = c.none},
+        GitSignsChangeDelete =  {fg = c.purple, bg = c.none},
 
         -- easymotion/vim-easymotion
         EasyMotionTarget = {fg = c.bg0, bg = c.bg_green},

@@ -16,10 +16,10 @@ local function init(c, _)
         LspDiagnosticsUnderlineWarning = {fg = c.none, bg = c.bg_visual_yellow, style = "undercurl", },
         LspDiagnosticsUnderlineInformation = {fg = c.none, bg = c.bg_visual_blue, style = "undercurl", },
         LspDiagnosticsUnderlineHint = {fg = c.red, },
-        LspDiagnosticsSignError = {fg = c.red, bg = c.bg2, },
-        LspDiagnosticsSignWarning = {fg = c.yellow, bg = c.bg2, },
-        LspDiagnosticsSignInformation = {fg = c.blue, bg = c.bg2, },
-        LspDiagnosticsSignHint = {fg = c.aqua, bg = c.bg2, },
+        LspDiagnosticsSignError = {fg = c.red, bg = c.none, },
+        LspDiagnosticsSignWarning = {fg = c.yellow, bg = c.none, },
+        LspDiagnosticsSignInformation = {fg = c.blue, bg = c.none, },
+        LspDiagnosticsSignHint = {fg = c.aqua, bg = c.none, },
     }
 
     return lsp
