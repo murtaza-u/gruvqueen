@@ -13,7 +13,7 @@ local function opt(key, default)
     return vim.g[key]
 end
 
-local default_bg = vim.o.background == "dark" and "#10151a" or "#f9f5d7"
+local default_bg = vim.o.background == "dark" and "#10151a" or "#fbf1c7"
 
 config = {
     transparent_background = opt("transparent_background", false),
