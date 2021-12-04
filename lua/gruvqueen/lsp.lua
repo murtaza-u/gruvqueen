@@ -8,10 +8,12 @@ local function init(c, _)
         LspDiagnosticsDefaultWarning = {fg = c.none, bg = c.bg_visual_yellow, style = "undercurl", },
         LspDiagnosticsDefaultInformation = {fg = c.none, bg = c.bg_visual_blue, style = "undercurl", },
         LspDiagnosticsDefaultHint = {fg = c.none, bg = c.bg_visual_green, style = "undercurl", },
+
         LspDiagnosticsVirtualTextError = {fg = c.red, },
         LspDiagnosticsVirtualTextWarning = {fg = c.yellow, },
         LspDiagnosticsVirtualTextInformation = {fg = c.blue, },
         LspDiagnosticsVirtualTextHint = {fg = c.green, },
+
         LspDiagnosticsUnderlineError = {fg = c.none, bg = c.bg_visual_red, style = "undercurl", },
         LspDiagnosticsUnderlineWarning = {fg = c.none, bg = c.bg_visual_yellow, style = "undercurl", },
         LspDiagnosticsUnderlineInformation = {fg = c.none, bg = c.bg_visual_blue, style = "undercurl", },
@@ -20,6 +22,12 @@ local function init(c, _)
         LspDiagnosticsSignWarning = {fg = c.yellow, bg = c.none, },
         LspDiagnosticsSignInformation = {fg = c.blue, bg = c.none, },
         LspDiagnosticsSignHint = {fg = c.aqua, bg = c.none, },
+
+        -- neovim 0.6
+        DiagnosticError = {fg = c.red, },
+        DiagnosticWarn = {fg = c.yellow, },
+        DiagnosticInfo = {fg = c.blue, },
+        DiagnosticHint = {fg = c.green, },
     }
 
     return lsp
