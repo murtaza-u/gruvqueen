@@ -1,6 +1,6 @@
 local function get_light_theme_palette()
     local common = {
-        bg0 =              '#fbf1c7',
+        bg0 =              '#f9f5d7',
         bg1 =              '#f5edca',
         bg2 =              '#f3eac7',
         bg3 =              '#f2e5bc',
