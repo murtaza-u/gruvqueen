@@ -1,14 +1,7 @@
 # Gruvqueen
 > Opinionated port of famous gruvbox theme (inspired by [gruvbox-material](https://github.com/sainnhe/gruvbox-material))
 
-* original
-![original](./assets/original.png)
-
-* mix
-![mix](./assets/mix.png)
-
-* material
-![material](./assets/material.png)
+![](./assets/asset.jpg)
 
 ** font☝️ : [JetBrains Mono Nerd Font](https://www.nerdfonts.com/font-downloads)
 
