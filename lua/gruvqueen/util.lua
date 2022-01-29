@@ -18,19 +18,6 @@ function M.initialise(skeleton)
     end
 end
 
-function M.modify(default, user_config)
-    for group, props in pairs(user_config) do
-        if not default[group] then
-            default[group] = {}
-        end
-
-        for prop, value in pairs(props) do
-            default[group][prop] = value
-        end
-    end
-    return default
-end
-
 function M.set_default()
     if vim.g.colors_name then vim.cmd("hi clear") end
     if vim.fn.exists("syntax_on") then vim.cmd("syntax reset") end
